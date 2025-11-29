@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  background: linear-gradient(135deg, #e8f5f1 0%, #f9fafb 50%, #e8f5f1 100%);
+  min-height: 100vh;
+}
+
+/* Ensure sufficient contrast for accessibility */
+.text-gray-500 {
+  color: rgb(107 114 128); /* WCAG AA compliant */
+}
+
+.text-gray-600 {
+  color: rgb(75 85 99); /* WCAG AA compliant */
+}
+
+.text-gray-700 {
+  color: rgb(55 65 81); /* WCAG AA compliant */
+}
+
+.glass-panel {
+  @apply bg-white/90 backdrop-blur-xl border border-white/40 shadow-2xl;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Enhance input focus states with better visibility */
+input[type="text"]:focus,
+input[type="range"]:focus,
+button:focus {
+  outline: 2px solid rgb(0, 106, 77);
+  outline-offset: 2px;
+}
+
+/* Improve range slider styling for better visibility */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(0, 106, 77);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(0, 106, 77);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Premium button hover effect */
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
