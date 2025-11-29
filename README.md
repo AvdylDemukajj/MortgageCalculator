@@ -1,16 +1,92 @@
-# React + Vite
+# Lloyds Bank Mortgage Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive mortgage calculator application built with React and Vite for Lloyds Bank.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is an advanced Mortgage Calculator that provides an intuitive and professional experience for clients calculating their monthly mortgage payments. The application implements a four-step wizard system and delivers interactive results with adjustment capabilities.
 
-## React Compiler
+## Core Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Multi-Step Wizard**: Clear, guided process reducing cognitive load
+- **Modern Design System**: Glass morphism effects and smooth animations
+- **Real-time Validation**: Continuous feedback mechanism for users
+- **Interactive Results**: Clear charts and data visualizations
+- **Automatic Persistence**: Data automatically saved to localStorage
+- **Accessibility**: Fully accessible implementation meeting WCAG 2.1 Level AA standards
 
-## Expanding the ESLint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** - Modern UI framework
+- **Vite** - Fast build tool
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations
+- **Lucide React** - Modern icon library
+
+## Documentation
+
+The project includes comprehensive documentation for presentation and feedback:
+
+- **[PRESENTATION.md](./PRESENTATION.md)** - Detailed design presentation and feature documentation
+- **[FEEDBACK_FORM.md](./FEEDBACK_FORM.md)** - Feedback collection form for focus groups
+- **[FEEDBACK_GUIDE.md](./FEEDBACK_GUIDE.md)** - Guide for using feedback for design refinement
+
+## Installation and Usage
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Layout.jsx          # Header, Footer, Navigation
+│   ├── Wizard.jsx          # Multi-step wizard logic
+│   └── steps/
+│       ├── StepProperty.jsx    # Step 1: Property & Deposit
+│       ├── StepIncome.jsx       # Step 2: Income & Details
+│       ├── StepOptions.jsx     # Step 3: Mortgage Options
+│       └── StepResults.jsx      # Step 4: Results & Adjustments
+├── utils/
+│   └── calculateMortgage.js    # Mortgage calculation logic
+├── App.jsx                 # Main application component
+└── main.jsx               # Application entry point
+```
+
+## Using Focus Group Feedback
+
+To utilize feedback from Virtual Focus Groups:
+
+1. **Prepare Presentation**: Use `PRESENTATION.md` as foundation
+2. **Collect Feedback**: Use `FEEDBACK_FORM.md` to document feedback
+3. **Analyze and Refine**: Follow guidelines in `FEEDBACK_GUIDE.md`
+
+## License
+
+This project is created for educational and demonstrative purposes.
+
+## Contributor
+
+AvdylDemukajj
